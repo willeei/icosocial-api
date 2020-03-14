@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import '../bootstrap';
+
+=======
+>>>>>>> 2ecbef07ecb53fdbe43c3e62a7af3bc0539d34e8
 import mongoose from 'mongoose';
 
 class Database {

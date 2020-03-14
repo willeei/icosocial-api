@@ -1,12 +1,18 @@
 import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
 
+import donorTypes from '../utils/constants/donorTypes';
+
 const UserSchema = new mongoose.Schema(
   {
     login: {
       type: String,
       required: true,
       unique: true,
+    },
+    name: {
+      type: String,
+      required: true,
     },
     password: {
       type: String,
@@ -20,8 +26,12 @@ const UserSchema = new mongoose.Schema(
     type: {
       type: String,
       required: true,
-      enum: ['DOADOR', 'INSTITUICAO'],
-      default: 'DOADOR',
+      enum: [donorTypes.DONOR, donorTypes.INSTITUTION],
+      default: donorTypes.DONOR,
+    },
+    avatar: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'File',
     },
   },
   {
