@@ -31,7 +31,7 @@ class AuthController {
       },
       token: jwt.sign(
         {
-          _id,
+          id: _id,
           name,
           login,
           type,

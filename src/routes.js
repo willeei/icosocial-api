@@ -1,17 +1,28 @@
 import { Router } from 'express';
+import multer from 'multer';
 
-<<<<<<< HEAD
+import multerConfig from './config/multer';
+
 import UserController from './app/controllers/UserController';
 import AuthController from './app/controllers/AuthController';
+import FileController from './app/controllers/FileController';
+
+import validateAuthStore from './app/validators/AuthStore';
+import validateUserStore from './app/validators/UserStore';
+import validateUserUpdater from './app/validators/UserUpdater';
+
+import authMiddleware from './app/middlewares/auth';
 
 const routes = Router();
+const upload = multer(multerConfig);
 
-routes.post('/users', UserController.store);
-routes.post('/auth', AuthController.store);
-=======
-const routes = Router();
+routes.post('/users', validateUserStore, UserController.store);
+routes.post('/auth', validateAuthStore, AuthController.store);
 
-routes.get('/', (req, res) => res.json({ message: 'Bem-vindo' }));
->>>>>>> 2ecbef07ecb53fdbe43c3e62a7af3bc0539d34e8
+routes.use(authMiddleware);
+
+routes.put('/users', validateUserUpdater, UserController.update);
+
+routes.post('/files', upload.single('file'), FileController.store);
 
 export default routes;
