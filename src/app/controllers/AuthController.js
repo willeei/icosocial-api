@@ -14,6 +14,12 @@ class AuthController {
       return res.status(401).json({ error: 'User not found' });
     }
 
+    if (!user.active) {
+      return res
+        .status(401)
+        .json({ error: 'This account is disabled, please contact us.' });
+    }
+
     if (!(await user.comparePassword(password))) {
       return res.status(401).json({ error: 'Password does not match' });
     }

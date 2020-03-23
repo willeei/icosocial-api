@@ -9,6 +9,7 @@
   "private": true,
   "scripts": {
     "dev": "nodemon src/server.js",
+    "dev:debug": "nodemon --inspect src/server.js",
     "build": "sucrase ./src -d ./dist --transform imports",
     "queue": "nodemon src/queue.js",
     "test": "NODE_ENV=test jest"

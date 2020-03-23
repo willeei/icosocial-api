@@ -6,14 +6,15 @@ class RecoverPasswordMail {
   }
 
   async handle({ data }) {
-    const { user } = data;
+    const { user, randomPasswd } = data;
 
     await Mail.sendMail({
-      to: '',
+      to: `${user.login} <${user.login}>`,
       subject: 'Recuperação de senha',
       template: 'recoverPassword',
       context: {
         user,
+        randomPasswd,
       },
     });
   }
