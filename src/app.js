@@ -10,7 +10,7 @@ import swaggerUi from 'swagger-ui-express';
 import routes from './routes';
 
 import sentryConfig from './config/sentry';
-import swaggerDocuments from './config/swagger';
+import Swagger from './config/Swagger';
 
 import './database';
 
@@ -27,11 +27,7 @@ class App {
   middlewares() {
     this.server.use(Sentry.Handlers.requestHandler());
     this.server.use(express.json());
-    this.server.use(
-      '/api/v1/docs',
-      swaggerUi.serve,
-      swaggerUi.setup(swaggerDocuments)
-    );
+    this.server.use('/api/v1/docs', swaggerUi.serve, swaggerUi.setup(Swagger));
     this.server.use(
       '/api/v1/files',
       express.static(path.resolve(__dirname, '..', 'tmp', 'uploads'))
