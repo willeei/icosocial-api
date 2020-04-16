@@ -1,6 +1,6 @@
 import User from '../models/User';
 
-class AccountController {
+class ActiveOrDesableAccountController {
   async store(req, res) {
     const account = User.findOne({ login: req.body.login });
 
@@ -22,4 +22,4 @@ class AccountController {
   }
 }
 
-export default new AccountController();
+export default new ActiveOrDesableAccountController();

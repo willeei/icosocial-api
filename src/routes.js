@@ -6,8 +6,9 @@ import multerConfig from './config/multer';
 import UserController from './app/controllers/UserController';
 import AuthController from './app/controllers/AuthController';
 import FileController from './app/controllers/FileController';
-import AccountController from './app/controllers/AccountController';
+import DonorController from './app/controllers/DonorController';
 import PasswordForgottenController from './app/controllers/PasswordForgottenController';
+import ActiveOrDesableAccountController from './app/controllers/ActiveOrDesableAccountController';
 
 import validateAuthStore from './app/validators/AuthStore';
 import validateUserStore from './app/validators/UserStore';
@@ -23,13 +24,16 @@ routes.put('/users/recoverPasswd', PasswordForgottenController.update);
 
 routes.post('/auth', validateAuthStore, AuthController.store);
 
-routes.put('/account/active', AccountController.store);
+routes.post('/donors/anonymous', DonorController.store);
 
 routes.use(authMiddleware);
 
 routes.put('/users', validateUserUpdater, UserController.update);
 
-routes.delete('/account/disable', AccountController.destroy);
+routes.put('/account/active', ActiveOrDesableAccountController.store);
+routes.delete('/account/disable', ActiveOrDesableAccountController.destroy);
+
+routes.post('/donors', DonorController.store);
 
 routes.post('/files', upload.single('file'), FileController.store);
 
