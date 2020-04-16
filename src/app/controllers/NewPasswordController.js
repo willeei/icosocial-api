@@ -13,7 +13,13 @@ class NewPasswordController {
 
     const passwd = await bcrypt.hashSync(password, 8);
 
-    await user.updateOne({ password: passwd });
+    if (!user.passwd_recover) {
+      return res
+        .status(400)
+        .json({ error: 'User does not have password recovery' });
+    }
+
+    await user.updateOne({ password: passwd, passwd_recover: false });
 
     return res.json({ success: 'Password changed' });
   }

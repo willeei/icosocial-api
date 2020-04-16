@@ -16,7 +16,7 @@ class PasswordForgottenController {
 
     let randomPasswd = await PasswordForgottenService.run({ user_id: id });
     randomPasswd = await bcrypt.hashSync(randomPasswd, 8);
-    await user.updateOne({ password: randomPasswd });
+    await user.updateOne({ password: randomPasswd, passwd_recover: true });
 
     return res.status(204).send();
   }
