@@ -28,12 +28,12 @@ class App {
     this.server.use(Sentry.Handlers.requestHandler());
     this.server.use(express.json());
     this.server.use(
-      '/api-docs',
+      '/api/v1/docs',
       swaggerUi.serve,
       swaggerUi.setup(swaggerDocuments)
     );
     this.server.use(
-      '/files',
+      '/api/v1/files',
       express.static(path.resolve(__dirname, '..', 'tmp', 'uploads'))
     );
   }
