@@ -14,6 +14,7 @@ describe('User', () => {
     const user = await User.create({
       login: 'will@a.aluno.com',
       password: '123456',
+      name: 'Will',
     });
 
     const compareHash = await user.comparePassword('123456');
@@ -22,15 +23,16 @@ describe('User', () => {
   });
 
   it('should be able to register', async () => {
-    const user = {
-      login: 'williamsgomes45@gmail.com',
-      password: '965526',
-    };
-
     const response = await request(app)
-      .post('/users')
-      .send(user);
+      .post('/api/v1/users')
+      .send({
+        login: 'williamsgomes45@gmail.com',
+        password: '965526',
+        name: 'Will',
+      });
 
-    expect(response.body).toHaveProperty('id');
+      console.log(response.body);
+
+    expect(response.body).toHaveProperty('_id');
   });
 });
