@@ -6,7 +6,9 @@ class FileController {
 
     const file = await File.create({ name, path });
 
-    return res.status(201).json(file);
+    const { _id, url } = file;
+
+    return res.status(201).json({ _id, name, path, url });
   }
 }
 

@@ -26,6 +26,8 @@ routes.put('/users/passwd/recover', PasswordForgottenController.update);
 
 routes.post('/auth', validateAuthStore, AuthController.store);
 
+routes.put('/account/active', ActiveOrDesableAccountController.update);
+
 routes.post('/donors/anonymous', DonorController.store);
 
 routes.use(authMiddleware);
@@ -37,7 +39,6 @@ routes.put(
   NewPasswordController.update
 );
 
-routes.put('/account/active', ActiveOrDesableAccountController.store);
 routes.delete('/account/disable', ActiveOrDesableAccountController.destroy);
 
 routes.post('/donors', DonorController.store);
