@@ -1,5 +1,3 @@
-import '../bootstrap';
-
 import mongoose from 'mongoose';
 
 class Database {
@@ -11,8 +9,6 @@ class Database {
     this.mongoConnection = mongoose.connect(process.env.MONGO_URL, {
       useNewUrlParser: true,
       useFindAndModify: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
     });
   }
 }
