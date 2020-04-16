@@ -5,9 +5,12 @@ import path from 'path';
 import Youch from 'youch';
 import * as Sentry from '@sentry/node';
 import 'express-async-errors';
+import swaggerUi from 'swagger-ui-express';
 
 import routes from './routes';
+
 import sentryConfig from './config/sentry';
+import Swagger from './config/Swagger';
 
 import './database';
 
@@ -24,14 +27,15 @@ class App {
   middlewares() {
     this.server.use(Sentry.Handlers.requestHandler());
     this.server.use(express.json());
+    this.server.use('/api/v1/docs', swaggerUi.serve, swaggerUi.setup(Swagger));
     this.server.use(
-      '/files',
+      '/api/v1/files',
       express.static(path.resolve(__dirname, '..', 'tmp', 'uploads'))
     );
   }
 
   routes() {
-    this.server.use(routes);
+    this.server.use('/api/v1', routes);
     this.server.use(Sentry.Handlers.errorHandler());
   }
 

@@ -4,15 +4,22 @@ import User from '../models/User';
 
 class NewPasswordController {
   async update(req, res) {
-    const user = await User.findOne({ _id: req.userId });
+    const { password } = req.body;
+    const user = await User.findOne({ _id: req.user.id });
 
     if (!user) {
       return res.status(404).json({ error: 'User not exists' });
     }
 
-    const password = await bcrypt.hashSync(req.body.password, 8);
+    const passwd = await bcrypt.hashSync(password, 8);
 
-    await user.updateOne({ password });
+    if (!user.passwd_recover) {
+      return res
+        .status(400)
+        .json({ error: 'User does not have password recovery' });
+    }
+
+    await user.updateOne({ password: passwd, passwd_recover: false });
 
     return res.json({ success: 'Password changed' });
   }

@@ -36,7 +36,9 @@ class UserController {
       return res.status(401).json({ error: 'Password does not match' });
     }
 
-    req.body.password = await bcrypt.hashSync(req.body.password, 8);
+    if (req.body.password) {
+      req.body.password = await bcrypt.hashSync(req.body.password, 8);
+    }
 
     await user.updateOne(req.body);
 
