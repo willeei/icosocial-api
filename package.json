@@ -1,6 +1,6 @@
 {
   "name": "icosocial-api",
-  "version": "1.0.0",
+  "version": "1.1.10",
   "description": "RESTful API of the Platform Icosocial",
   "main": "index.js",
   "repository": "https://github.com/wwwgomes/icosocial-api.git",
@@ -8,21 +8,43 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/server.js",
+    "dev:debug": "nodemon --inspect src/server.js",
+    "build": "sucrase ./src -d ./dist --transform imports",
+    "queue": "nodemon src/queue.js",
+    "test": "cross-env NODE_ENV=test jest"
   },
   "dependencies": {
+    "@sentry/node": "^5.14.2",
+    "bcryptjs": "^2.4.3",
+    "bee-queue": "^1.2.3",
+    "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.9.4"
+    "express-async-errors": "^3.1.1",
+    "express-handlebars": "^3.1.0",
+    "ioredis": "^4.16.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.4",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.5",
+    "nodemailer-express-handlebars": "^3.1.0",
+    "swagger-ui-express": "^4.1.4",
+    "youch": "^2.0.10",
+    "yup": "^0.28.3"
   },
   "devDependencies": {
+    "@sucrase/jest-plugin": "^2.0.0",
+    "@types/jest": "^25.1.4",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^25.1.0",
     "nodemon": "^2.0.2",
     "prettier": "^1.19.1",
-    "sucrase": "^3.12.1"
+    "sucrase": "^3.12.1",
+    "supertest": "^4.0.2"
   }
 }
