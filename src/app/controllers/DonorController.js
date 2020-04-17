@@ -8,6 +8,8 @@ class DonorController {
     if (req.user) {
       userId = req.user.id;
       donorExists = await Donor.findOne({ user_id: req.user.id });
+    } else {
+      donorExists = await Donor.findOne({ cpf: req.body.cpf });
     }
 
     if (donorExists) {
@@ -16,7 +18,7 @@ class DonorController {
         .json({ error: 'Donor registration already exists' });
     }
 
-    const mailExists = await Donor.findOne({ mail: req.body.mail });
+    const mailExists = await Donor.findOne({ email: req.body.email });
 
     if (mailExists) {
       return res
@@ -38,6 +40,63 @@ class DonorController {
     }
 
     return res.json(result);
+  }
+
+  async update(req, res) {
+    let userId;
+    let donorExists;
+
+    if (req.user) {
+      userId = req.user.id;
+      donorExists = await Donor.findOne({ user_id: req.user.id });
+    } else {
+      donorExists = await Donor.findOne({ _id: req.params.id });
+    }
+
+    if (!donorExists) {
+      return res
+        .status(400)
+        .json({ error: 'There is no registration for this donor' });
+    }
+
+    const mailExists = await Donor.findOne({ email: req.body.email });
+
+    if (mailExists) {
+      return res
+        .status(400)
+        .json({ error: 'There is already a donor with this email' });
+    }
+
+    const donor = donorExists;
+
+    if (userId) {
+      donor.user_id = userId;
+    }
+
+    await donor.updateOne(req.body);
+
+    return res.status(204).send();
+  }
+
+  async delete(req, res) {
+    const { id } = req.params;
+    let userId;
+
+    const { anonymous } = id ? await Donor.findById(id) : false;
+
+    if (req.user) {
+      userId = req.user.id;
+    }
+
+    if (userId) {
+      await Donor.findOneAndUpdate({ user_id: userId }, { disabled: true });
+    } else if (anonymous) {
+      await Donor.findOneAndUpdate({ _id: id }, { disabled: true });
+    } else {
+      return res.status(400).json({ error: 'Donor is not anonymous' });
+    }
+
+    return res.status(204).send();
   }
 }
 

@@ -28,7 +28,9 @@ routes.post('/auth', validateAuthStore, AuthController.store);
 
 routes.put('/account/active', ActiveOrDesableAccountController.update);
 
-routes.post('/donors/anonymous', DonorController.store);
+routes.post('/donors/anon', DonorController.store);
+routes.put('/donors/anon/:id', DonorController.update);
+routes.delete('/donors/anon/:id', DonorController.delete);
 
 routes.use(authMiddleware);
 
@@ -42,6 +44,8 @@ routes.put(
 routes.delete('/account/disable', ActiveOrDesableAccountController.destroy);
 
 routes.post('/donors', DonorController.store);
+routes.put('/donors', DonorController.update);
+routes.delete('/donors', DonorController.delete);
 
 routes.post('/files', upload.single('file'), FileController.store);
 
