@@ -42,7 +42,7 @@ const files = {
                 },
                 url: {
                   type: 'string',
-                  example: `${process.env.APP_URL}/files/05281bbc7c90eefe275dadcd77f743e3.jpg`,
+                  example: `${process.env.APP_URL}/${process.env.BASE_PATH}/files/05281bbc7c90eefe275dadcd77f743e3.jpg`,
                 },
               },
             },

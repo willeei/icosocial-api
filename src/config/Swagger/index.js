@@ -2,13 +2,9 @@ import Models, { Accounts, Auth, Files, Users, UsersPasswd } from './Models';
 
 const swaggerDocuments = {
   openapi: '3.0.1',
-  schemes: ['http', 'https'],
-  host: process.env.APP_URL,
-  basePath: '/api/v1',
   info: Models.info,
   components: Models.components,
   tags: Models.tags,
-  definitions: {},
   paths: {
     '/auth': Auth,
     '/users': Users,
@@ -22,7 +18,7 @@ const swaggerDocuments = {
   },
   servers: [
     {
-      url: process.env.APP_URL,
+      url: `${process.env.APP_URL}/${process.env.BASE_PATH}`,
       description: 'Servidor da API',
     },
   ],

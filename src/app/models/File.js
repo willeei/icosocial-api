@@ -20,7 +20,7 @@ const FileSchema = new mongoose.Schema(
 );
 
 FileSchema.virtual('url').get(function() {
-  return `${process.env.APP_URL}/files/${this.path}`;
+  return `${process.env.APP_URL}/${process.env.BASE_PATH}/files/${this.path}`;
 });
 
 export default mongoose.model('File', FileSchema);
