@@ -18,7 +18,7 @@ const DonorSchema = mongoose.Schema(
       type: String,
       require: false,
     },
-    mail: {
+    email: {
       type: String,
       require: true,
     },
@@ -51,12 +51,11 @@ const DonorSchema = mongoose.Schema(
       require: false,
     },
     date_of_birth: {
-      type: Date,
+      type: String,
       require: false,
     },
     anonymous: {
       type: Boolean,
-      require: true,
       default: true,
     },
     disabled: {
@@ -66,7 +65,7 @@ const DonorSchema = mongoose.Schema(
     },
     user_id: {
       type: String,
-      require: true,
+      require: false,
     },
   },
   { timestamps: true }

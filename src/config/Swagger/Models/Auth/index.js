@@ -1,7 +1,7 @@
 const auth = {
   post: {
     summary: 'Autenticação do usuário',
-    tags: ['Auth'],
+    tags: ['auth'],
     description: 'Realiza login do usuário na plataforma.',
     requestBody: {
       content: {
