@@ -1,7 +1,7 @@
 const recover = {
   put: {
     summary: 'Recuperação de senha',
-    tags: ['Users'],
+    tags: ['users'],
     description:
       'Cria uma nova senha para o usuário que é enviada direto para seu e-mail cadastrado.',
     requestBody: {
@@ -32,7 +32,7 @@ const recover = {
 const update = {
   put: {
     summary: 'Altera senha',
-    tags: ['Users'],
+    tags: ['users'],
     security: [{ bearerAuth: [] }],
     description:
       'Altera senha de usuário após a solicitação de recuperação da senha.',

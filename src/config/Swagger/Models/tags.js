@@ -1,17 +1,17 @@
 export default [
   {
-    name: 'Auth',
+    name: 'auth',
   },
   {
-    name: 'Users',
+    name: 'users',
   },
   {
-    name: 'Files',
+    name: 'files',
   },
   {
-    name: 'Donors',
+    name: 'donors',
   },
   {
-    name: 'Accounts',
+    name: 'accounts',
   },
 ];

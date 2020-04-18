@@ -3,7 +3,7 @@ import { recover, update } from './passwd';
 const users = {
   post: {
     summary: 'Cadastra Usuário',
-    tags: ['Users'],
+    tags: ['users'],
     description: 'Cadastra um novo usuário na plataforma.',
     requestBody: {
       content: {
@@ -79,7 +79,7 @@ const users = {
   },
   put: {
     summary: 'Altera Usuário',
-    tags: ['Users'],
+    tags: ['users'],
     security: [{ bearerAuth: [] }],
     description: 'Altera um usuário que esteja logado na plataforma.',
     requestBody: {

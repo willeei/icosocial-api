@@ -27,15 +27,19 @@ class App {
   middlewares() {
     this.server.use(Sentry.Handlers.requestHandler());
     this.server.use(express.json());
-    this.server.use('/api/v1/docs', swaggerUi.serve, swaggerUi.setup(Swagger));
     this.server.use(
-      '/api/v1/files',
+      `/${process.env.BASE_PATH}/docs`,
+      swaggerUi.serve,
+      swaggerUi.setup(Swagger)
+    );
+    this.server.use(
+      `/${process.env.BASE_PATH}/files`,
       express.static(path.resolve(__dirname, '..', 'tmp', 'uploads'))
     );
   }
 
   routes() {
-    this.server.use('/api/v1', routes);
+    this.server.use(`/${process.env.BASE_PATH}`, routes);
     this.server.use(Sentry.Handlers.errorHandler());
   }
 
