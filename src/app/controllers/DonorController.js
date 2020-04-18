@@ -1,6 +1,36 @@
 import Donor from '../models/Donor';
 
 class DonorController {
+  async index(req, res) {
+    if (req.user) {
+      return res.status(400).json({ error: 'No informed users' });
+    }
+
+    const donors = await Donor.find();
+
+    return res.json(donors);
+  }
+
+  async show(req, res) {
+    let donor;
+
+    if (req.user) {
+      donor = await Donor.findOne({
+        user_id: req.user.id,
+        anonymous: false,
+        disabled: false,
+      });
+    } else {
+      donor = await Donor.findOne({
+        cpf: req.params.cpf,
+        anonymous: true,
+        disabled: false,
+      });
+    }
+
+    return res.json(donor);
+  }
+
   async store(req, res) {
     let donorExists;
     let userId;

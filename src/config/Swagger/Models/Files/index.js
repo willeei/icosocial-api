@@ -1,7 +1,7 @@
 const files = {
   post: {
     summary: 'Registra Arquivo',
-    tags: ['Files'],
+    tags: ['files'],
     security: [{ bearerAuth: [] }],
     description: 'Registra um novo arquivo para ser usado na plataforma.',
     requestBody: {

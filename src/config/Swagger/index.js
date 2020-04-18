@@ -1,4 +1,11 @@
-import Models, { Accounts, Auth, Files, Users, UsersPasswd } from './Models';
+import Models, {
+  Accounts,
+  Auth,
+  Files,
+  Users,
+  UsersPasswd,
+  Donors,
+} from './Models';
 
 const swaggerDocuments = {
   openapi: '3.0.1',
@@ -10,8 +17,11 @@ const swaggerDocuments = {
     '/users': Users,
     '/users/passwd/recover': UsersPasswd.recover,
     '/users/passwd/update': UsersPasswd.update,
-    '/donors': {},
-    '/donors/anonymous': {},
+    '/donors': Donors.Donor,
+    '/donors/profile': Donors.profile,
+    '/donors/anon': Donors.AnonymousDonor.post,
+    '/donors/anon/{cpf}': Donors.AnonymousDonor.get,
+    '/donors/anon/{id}': Donors.AnonymousDonor.byId,
     '/account/active': Accounts.active,
     '/account/disable': Accounts.disable,
     '/files': Files,

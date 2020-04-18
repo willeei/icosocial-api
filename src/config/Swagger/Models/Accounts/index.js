@@ -1,7 +1,7 @@
 const active = {
   put: {
     summary: 'Ativa conta',
-    tags: ['Accounts'],
+    tags: ['accounts'],
     description: 'Ativa uma conta que esteja desativada.',
     requestBody: {
       content: {
@@ -30,7 +30,7 @@ const active = {
 const disable = {
   delete: {
     summary: 'Desativa conta do usuário',
-    tags: ['Accounts'],
+    tags: ['accounts'],
     security: [{ bearerAuth: [] }],
     description: 'Desativa a conta do usuário logado.',
     responses: {
