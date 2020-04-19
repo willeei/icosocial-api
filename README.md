@@ -1,9 +1,9 @@
 <h1 align="center">
-    <img alt="DevRadar" title="#delicinha" src=".github/logo.png" width="300px" />
+    <img alt="Icó Social" src=".github/logo.png" width="300px" />
 </h1>
 
 <h4 align="center">
-  <strong style="color: #31b627">RESTful API</strong>
+  <strong>RESTful API</strong>
 </h4>
 
 <p align="center">
@@ -13,11 +13,12 @@
 </p>
 
 <p align="center">
-  <a style="color: #47094f" href="#floppy_disk-technology">Technology</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a style="color: #47094f" href="#computer-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a style="color: #47094f" href="#family_man_man_boy_boy-contribute">Contribute</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a style="color: #47094f" href="#memo-license">License</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a style="color: #47094f" href="#blue_heart-contributors">Contributors</a>
+  <a href="#floppy_disk-technology">Technology</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#computer-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#books-documentation">Documentation</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#family_man_man_boy_boy-contribute">Contribute</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-license">License</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#blue_heart-contributors">Contributors</a>
 </p>
 
 <br>
@@ -30,10 +31,14 @@
 This project was developed with the following technologies:
 
 <ul>
-  <li><a style="color: #47094f" href="https://nodejs.org/en/">Node.js</a></li>
-  <li><a style="color: #47094f" href="https://www.mongodb.com/">Mongo</a></li>
-  <li><a style="color: #47094f" href="https://redis.io/">Redis</a></li>
+  <li><a href="https://nodejs.org/en/">Node.js</a></li>
+  <li><a href="https://www.mongodb.com/">Mongo</a></li>
+  <li><a href="https://redis.io/">Redis</a></li>
+  <li><a href="http://sentry.io/">Sentry</a></li>
+  <li><a href="https://swagger.io/">Swagger</a></li>
 </ul>
+
+<img align="center" alt="Tecnologias" src=".github/icosocial2.png" />
 
 ## :computer: Project
 
@@ -41,13 +46,40 @@ This project is part of the NGO Eco Social.
 
 This is the RESTful API that is responsible for the business layer of the application.
 
+##### 🔢 Commands
+
+#### **`yarn dev`** 
+>Run the project under development using the nodemon.
+
+#### **`yarn dev:debug`** 
+> Run the project under development with debug.
+
+#### **`yarn dev:queue`** 
+> Runs queue in development.
+
+#### **`yarn test`** 
+> Run tests.
+
+#### **`yarn build`**
+> Build the application.
+
+#### **`yarn start`**
+> Run the application in production. You need to run the **`yarn build`** command first.
+
+#### **`yarn queue`**
+> Executes the application queue in production. You need to run the **`yarn build`** command first.
+
+## :books: Documentation
+
+See the API documentation [here](http://157.245.216.89/api/v1/docs/).
+
 ## :family_man_man_boy_boy: Contribute
 
-<p>To contribute, <a style="color: #47094f" href="CONTRIBUTING.md">follow these instructions</a>.</p>
+<p>To contribute, <a href="CONTRIBUTING.md">follow these instructions</a>.</p>
 
 ## :memo: License
 
-<p>This project is under the MIT license. See the file <a style="color: #47094f" href="LICENSE.md">LICENSE</a> for more details.</p>
+<p>This project is under the MIT license. See the file <a href="LICENSE.md">LICENSE</a> for more details.</p>
 
 ## :blue_heart: Contributors
 
@@ -58,7 +90,7 @@ This is the RESTful API that is responsible for the business layer of the applic
         <img style="border-radius: 50px;" src="https://avatars3.githubusercontent.com/u/57773072?s=400&u=3e7a2a8a432118afa4446cacfcaf9c118056db7b&v=4" width="70px;" alt="Williams Gomes"/>
         <br />
         <sub>
-          <b style="color: #47094f">Williams Gomes</b>
+          <b>Williams Gomes</b>
         </sub>
       </a>
       <br />

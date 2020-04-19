@@ -19,4 +19,4 @@ The Icósocial API is under the MIT license, if you want to contribute follow th
 - Commit your changes: `git commit -m 'feat: Minha nova feature'`;
 - Push to your branch: `git push origin minha-feature`.
 
-After the merge of your pull request is done, you can delete your branch.
+> After the merge of your pull request is done, you can delete your branch.
