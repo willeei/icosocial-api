@@ -1,9 +1,8 @@
-import request from 'supertest';
-import bcrypt from 'bcryptjs';
+const request = require('supertest');
 
-import app from '../../src/app';
+const app = require('../../src/app');
 
-import User from '../../src/app/models/User';
+const User = require('../../src/app/models/User');
 
 describe('User', () => {
   beforeEach(async () => {
