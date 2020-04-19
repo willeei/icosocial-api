@@ -1,29 +1,70 @@
-# IcóSocial RESTful API
+<h1 align="center">
+    <img alt="DevRadar" title="#delicinha" src=".github/logo.png" width="300px" />
+</h1>
 
-This is the REST API project for the Icósocial platform.
+<h4 align="center">
+  <strong style="color: #31b627">RESTful API</strong>
+</h4>
 
-## Development environment
+<p align="center">
+ <img src="https://img.shields.io/static/v1?label=PRs&message=welcome&color=7159c1&labelColor=000000" alt="PRs welcome!" />
 
-Everything you need to start contributing to the development of this API.
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=7159c1&labelColor=000000">
+</p>
 
-### Project Development Settings
+<p align="center">
+  <a style="color: #47094f" href="#floppy_disk-technology">Technology</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a style="color: #47094f" href="#computer-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a style="color: #47094f" href="#family_man_man_boy_boy-contribute">Contribute</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a style="color: #47094f" href="#memo-license">License</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a style="color: #47094f" href="#blue_heart-contributors">Contributors</a>
+</p>
 
-1. Download [VSCode](https://code.visualstudio.com/).
-2. Download the extensions: _ESLint_, _Prettier_ and _EditorConfig_.
-3. Install [Node](https://nodejs.org/en/) or [NVM-unix](https://github.com/nvm-sh/nvm), [NVM-win](https://github.com/coreybutler/nvm-windows)
-and follow the steps to run Node and npm.
-4. Install [YARN](https://classic.yarnpkg.com/pt-BR/docs/install)
-5. Run ```yarn``` or ```yarn install``` in the project folder
-6. Create a file named ```.env``` and copy the contents of the ```.env.example``` file and change / add the values ​​according to your environment settings.
-7. Opening the project in VSCode and from then on it is just joy.
-8. Run ```yarn dev``` to start the application.
+<br>
 
-### Environment variables
+<p align="center" style="color: #333">
+<strong>Icósocial</strong> is an NGO (non-governmental organization) that helps people (children and their guardians) by offering language, sports and other classes.</p>
 
-List of environment variables used in the .env file
+## :floppy_disk: Technology
 
-| Variables | Description                                             |
-|-----------|---------------------------------------------------------|
-| NODE_ENV  | Defines the environment [development, test, production] |
-| PORT      | Defines the port used by the application                |
-| MONGO_URL | Defines the access url to the MongoDB                   |
+This project was developed with the following technologies:
+
+<ul>
+  <li><a style="color: #47094f" href="https://nodejs.org/en/">Node.js</a></li>
+  <li><a style="color: #47094f" href="https://www.mongodb.com/">Mongo</a></li>
+  <li><a style="color: #47094f" href="https://redis.io/">Redis</a></li>
+</ul>
+
+## :computer: Project
+
+This project is part of the NGO Eco Social.
+
+This is the RESTful API that is responsible for the business layer of the application.
+
+## :family_man_man_boy_boy: Contribute
+
+<p>To contribute, <a style="color: #47094f" href="CONTRIBUTING.md">follow these instructions</a>.</p>
+
+## :memo: License
+
+<p>This project is under the MIT license. See the file <a style="color: #47094f" href="LICENSE.md">LICENSE</a> for more details.</p>
+
+## :blue_heart: Contributors
+
+<table>
+  <tr>
+    <td align="center" style="border: none;">
+      <a href="https://github.com/wwwgomes">
+        <img style="border-radius: 50px;" src="https://avatars3.githubusercontent.com/u/57773072?s=400&u=3e7a2a8a432118afa4446cacfcaf9c118056db7b&v=4" width="70px;" alt="Williams Gomes"/>
+        <br />
+        <sub>
+          <b style="color: #47094f">Williams Gomes</b>
+        </sub>
+      </a>
+      <br />
+      <p><scan title="Code">💻</scan>|<scan title="Documentation">📖</scan>|<scan title="Bugs">🐛</scan></p>
+    </td>
+  </tr>
+</table>
+
+---
