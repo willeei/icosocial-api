@@ -17,42 +17,75 @@ import validateUserUpdater from './app/validators/UserUpdater';
 import validatePasswdUpdater from './app/validators/PasswdUpdater';
 
 import authMiddleware from './app/middlewares/auth';
+import VoluntaryController from './app/controllers/VoluntaryController';
 
 const routes = Router();
 const upload = multer(multerConfig);
 
-routes.post('/users', validateUserStore, UserController.store);
-routes.put('/users/passwd/recover', PasswordForgottenController.update);
-
+// Auth
 routes.post('/auth', validateauthStore, authController.store);
 
-routes.put('/account/active', ActiveOrDesableAccountController.update);
+// Users
+routes.post('/users', validateUserStore, UserController.store);
 
-routes.post('/donors/anon', DonorController.store);
-
-routes.put('/donors/anon/:id', DonorController.update);
-routes.delete('/donors/anon/:id', DonorController.delete);
-
-routes.get('/donors/anon/:cpf', DonorController.show);
-
-routes.use(authMiddleware);
-
-routes.put('/users', validateUserUpdater, UserController.update);
+routes.put('/users/passwd/recover', PasswordForgottenController.update);
+routes.put(
+  '/users',
+  authMiddleware,
+  validateUserUpdater,
+  UserController.update
+);
 routes.put(
   '/users/passwd/update',
+  authMiddleware,
   validatePasswdUpdater,
   NewPasswordController.update
 );
 
-routes.delete('/account/disable', ActiveOrDesableAccountController.destroy);
+// Accounts
+routes.put('/account/active', ActiveOrDesableAccountController.update);
 
-routes.get('/donors', DonorController.index);
-routes.post('/donors', DonorController.store);
-routes.put('/donors', DonorController.update);
-routes.delete('/donors', DonorController.delete);
+routes.delete(
+  '/account/disable',
+  authMiddleware,
+  ActiveOrDesableAccountController.destroy
+);
 
-routes.get('/donors/profile', DonorController.show);
+// Donors
+routes.get('/donors', authMiddleware, DonorController.index);
+routes.get('/donors/profile', authMiddleware, DonorController.show);
 
-routes.post('/files', upload.single('file'), FileController.store);
+routes.post('/donors', authMiddleware, DonorController.store);
+routes.put('/donors', authMiddleware, DonorController.update);
+routes.delete('/donors', authMiddleware, DonorController.delete);
+
+routes.get('/donors/anon/:cpf', DonorController.show);
+routes.post('/donors/anon', DonorController.store);
+routes.put('/donors/anon/:id', DonorController.update);
+routes.delete('/donors/anon/:id', DonorController.delete);
+
+// Volunteers
+routes.get('/volunteers', authMiddleware, VoluntaryController.index);
+routes.get('/volunteers/profile', authMiddleware, VoluntaryController.show);
+routes.get('/volunteers/:id', VoluntaryController.findById);
+
+routes.post('/volunteers', VoluntaryController.store);
+
+routes.put('/volunteers', authMiddleware, VoluntaryController.update);
+routes.put(
+  '/volunteers/active/:id',
+  authMiddleware,
+  VoluntaryController.active
+);
+
+routes.delete('/volunteers', authMiddleware, VoluntaryController.delete);
+
+// Files
+routes.post(
+  '/files',
+  authMiddleware,
+  upload.single('file'),
+  FileController.store
+);
 
 export default routes;
