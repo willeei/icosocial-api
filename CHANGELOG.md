@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.2.13 (20/04/2020)
+
+
+---
+
+## v1.2.12-1 (20/04/2020)
+- [New Version](https://github.com/wwwgomes/icosocial-api/commit/51cfc182cd128ae1f39b005201a761eda2c4cf86) - @wwwgomes
+- [Adjust repository documentation](https://github.com/wwwgomes/icosocial-api/commit/907fe62672c8f5f3de3e2fd3e00c45e102319bf3) - @wwwgomes
+- [Adjust dicumentation of the repository](https://github.com/wwwgomes/icosocial-api/commit/9e597acf3a6666f2bfd1582c30bba6e89776bcc5) - @wwwgomes
+
+---
+
 ## v1.1.10 (18/04/2020)
 - [Resove problem in merge](https://github.com/wwwgomes/icosocial-api/commit/10d15966887f80cb552b93a57ed0c57685c8e4ca) - @wwwgomes
 - [Rebase](https://github.com/wwwgomes/icosocial-api/commit/d67530c5b28251e5073db74b945774201ef8937d) - @wwwgomes
