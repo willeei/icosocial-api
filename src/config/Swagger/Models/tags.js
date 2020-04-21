@@ -14,4 +14,7 @@ export default [
   {
     name: 'accounts',
   },
+  {
+    name: 'volunteers',
+  },
 ];
