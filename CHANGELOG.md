@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.3.0 (21/04/2020)
+- [Update version](https://github.com/wwwgomes/icosocial-api/commit/517183231410bb7ae04c6dc0938c9d7255cd0024) - @wwwgomes
+- [Voluntary documentation](https://github.com/wwwgomes/icosocial-api/commit/f14fcc0412ff84a2f0873af004f7a65a40eab85f) - @wwwgomes
+- [Volunteer Management](https://github.com/wwwgomes/icosocial-api/commit/ddfd1cd8abb06509b692dc68c76b19d2b049cb65) - @wwwgomes
+- [Resolve user verify](https://github.com/wwwgomes/icosocial-api/commit/7955841edaff40f56e34e6fc92d61057dd40e4ab) - @wwwgomes
+- [Resolve release notes](https://github.com/wwwgomes/icosocial-api/commit/6acc8ffc628de3b7cb746cae86aa8981e3d1d40d) - @wwwgomes
+- [Update Release Notes](https://github.com/wwwgomes/icosocial-api/commit/f174fbb533573ed6037c5e664c3d7dbd9e9c3e23) - @wwwgomes
+
+---
+
 ## v1.2.13 (20/04/2020)
 - [Update version](https://github.com/wwwgomes/icosocial-api/commit/72bc087fd98b578b4883f2bf2f569593df1bc60d) - @wwwgomes
 - [Resolves route conflict issues](https://github.com/wwwgomes/icosocial-api/commit/f8986bf5c8996a2de7b3076db59611dfdaf0048d) - @wwwgomes
