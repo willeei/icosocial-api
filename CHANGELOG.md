@@ -1,7 +1,8 @@
 # Changelog
 
 ## v1.2.13 (20/04/2020)
-
+- [Update version](https://github.com/wwwgomes/icosocial-api/commit/72bc087fd98b578b4883f2bf2f569593df1bc60d) - @wwwgomes
+- [Resolves route conflict issues](https://github.com/wwwgomes/icosocial-api/commit/f8986bf5c8996a2de7b3076db59611dfdaf0048d) - @wwwgomes
 
 ---
 

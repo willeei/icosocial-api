@@ -78,7 +78,11 @@ routes.put(
   VoluntaryController.active
 );
 
-routes.delete('/volunteers', authMiddleware, VoluntaryController.delete);
+routes.delete(
+  '/volunteers/profile',
+  authMiddleware,
+  VoluntaryController.delete
+);
 
 // Files
 routes.post(

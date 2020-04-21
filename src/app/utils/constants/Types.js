@@ -1,4 +1,5 @@
 export default {
   DONOR: 'DOADOR',
   INSTITUTION: 'INSTITUICAO',
+  VOLUNTARY: 'VOLUNTARIO',
 };

@@ -5,6 +5,7 @@ import Models, {
   Users,
   UsersPasswd,
   Donors,
+  Volunteers,
 } from './Models';
 
 const swaggerDocuments = {
@@ -20,10 +21,14 @@ const swaggerDocuments = {
     '/donors': Donors.Donor,
     '/donors/profile': Donors.profile,
     '/donors/anon': Donors.AnonymousDonor.post,
-    '/donors/anon/{cpf}': Donors.AnonymousDonor.get,
-    '/donors/anon/{id}': Donors.AnonymousDonor.byId,
+    '/donors/anon/:cpf': Donors.AnonymousDonor.get,
+    '/donors/anon/:id': Donors.AnonymousDonor.byId,
     '/account/active': Accounts.active,
     '/account/disable': Accounts.disable,
+    '/volunteers': Volunteers.Voluntary,
+    '/volunteers/:id': Volunteers.findById,
+    '/volunteers/profile': Volunteers.profiles,
+    '/volunteers/active/:id': Volunteers.activeById,
     '/files': Files,
   },
   servers: [

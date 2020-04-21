@@ -2,7 +2,7 @@ import Donor from '../models/Donor';
 
 class DonorController {
   async index(req, res) {
-    if (req.user) {
+    if (!req.user) {
       return res.status(400).json({ error: 'No informed users' });
     }
 

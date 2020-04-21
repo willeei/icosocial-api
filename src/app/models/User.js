@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
 
-import donorTypes from '../utils/constants/donorTypes';
+import Types from '../utils/constants/Types';
 
 const UserSchema = new mongoose.Schema(
   {
@@ -31,8 +31,8 @@ const UserSchema = new mongoose.Schema(
     type: {
       type: String,
       required: true,
-      enum: [donorTypes.DONOR, donorTypes.INSTITUTION],
-      default: donorTypes.DONOR,
+      enum: [Types.DONOR, Types.INSTITUTION, Types.VOLUNTARY],
+      default: Types.DONOR,
     },
     avatar: {
       type: mongoose.Schema.Types.ObjectId,
