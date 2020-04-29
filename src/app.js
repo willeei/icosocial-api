@@ -7,7 +7,7 @@ import * as Sentry from '@sentry/node';
 import 'express-async-errors';
 import swaggerUi from 'swagger-ui-express';
 
-import routes from './routes';
+import routes from './router';
 
 import sentryConfig from './config/sentry';
 import Swagger from './config/Swagger';
