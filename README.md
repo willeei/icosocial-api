@@ -7,7 +7,8 @@
 </h4>
 
 <p align="center">
- <img src="https://img.shields.io/static/v1?label=PRs&message=welcome&color=7159c1&labelColor=000000" alt="PRs welcome!" />
+  <a href="https://github-tools.github.io/github-release-notes/" ><img src=https://img.shields.io/badge/%F0%9F%A4%96-release%20notes-00B2EE.svg alt="Automated Release Notes by gren"/></a>
+  <img src="https://img.shields.io/static/v1?label=PRs&message=welcome&color=7159c1&labelColor=000000" alt="PRs welcome!" />
 
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=7159c1&labelColor=000000">
 </p>
@@ -48,16 +49,16 @@ This is the RESTful API that is responsible for the business layer of the applic
 
 ##### 🔢 Commands
 
-#### **`yarn dev`** 
+#### **`yarn dev`**
 >Run the project under development using the nodemon.
 
-#### **`yarn dev:debug`** 
+#### **`yarn dev:debug`**
 > Run the project under development with debug.
 
-#### **`yarn dev:queue`** 
+#### **`yarn dev:queue`**
 > Runs queue in development.
 
-#### **`yarn test`** 
+#### **`yarn test`**
 > Run tests.
 
 #### **`yarn build`**

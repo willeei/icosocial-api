@@ -69,7 +69,7 @@ class DonorController {
       result = await Donor.create(req.body);
     }
 
-    return res.json(result);
+    return res.status(201).json(result);
   }
 
   async update(req, res) {
