@@ -6,6 +6,7 @@ import Models, {
   UsersPasswd,
   Donors,
   Volunteers,
+  Donation,
 } from './Models';
 
 const swaggerDocuments = {
@@ -23,6 +24,7 @@ const swaggerDocuments = {
     '/donors/anon': Donors.AnonymousDonor.post,
     '/donors/anon/:cpf': Donors.AnonymousDonor.get,
     '/donors/anon/:id': Donors.AnonymousDonor.byId,
+    '/donations': Donation,
     '/account/active': Accounts.active,
     '/account/disable': Accounts.disable,
     '/volunteers': Volunteers.Voluntary,

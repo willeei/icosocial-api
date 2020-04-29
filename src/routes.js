@@ -7,6 +7,7 @@ import UserController from './app/controllers/UserController';
 import authController from './app/controllers/AuthController';
 import FileController from './app/controllers/FileController';
 import DonorController from './app/controllers/DonorController';
+import DonationController from './app/controllers/DonationController';
 import NewPasswordController from './app/controllers/NewPasswordController';
 import PasswordForgottenController from './app/controllers/PasswordForgottenController';
 import ActiveOrDesableAccountController from './app/controllers/ActiveOrDesableAccountController';
@@ -63,6 +64,9 @@ routes.get('/donors/anon/:cpf', DonorController.show);
 routes.post('/donors/anon', DonorController.store);
 routes.put('/donors/anon/:id', DonorController.update);
 routes.delete('/donors/anon/:id', DonorController.delete);
+
+// Donations
+routes.post('/donations', authMiddleware, DonationController.store);
 
 // Volunteers
 routes.get('/volunteers', authMiddleware, VoluntaryController.index);
