@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.4.0 (29/04/2020)
+- [Donation route 👌](https://github.com/wwwgomes/icosocial-api/commit/eae61e544954f159a6862cdeeeb0816a5f1796d2) - @wwwgomes
+- [Add donation](https://github.com/wwwgomes/icosocial-api/commit/d112c5a11b4e7308d9bc4d1876a0a51dc8a33cd7) - @wwwgomes
+- [Update release notes](https://github.com/wwwgomes/icosocial-api/commit/c1b3d642637e189d2cf2bcb34d3805a45e964f1d) - @wwwgomes
+
+---
+
 ## v1.3.0 (21/04/2020)
 - [Update version](https://github.com/wwwgomes/icosocial-api/commit/517183231410bb7ae04c6dc0938c9d7255cd0024) - @wwwgomes
 - [Voluntary documentation](https://github.com/wwwgomes/icosocial-api/commit/f14fcc0412ff84a2f0873af004f7a65a40eab85f) - @wwwgomes
@@ -20,6 +27,21 @@
 - [New Version](https://github.com/wwwgomes/icosocial-api/commit/51cfc182cd128ae1f39b005201a761eda2c4cf86) - @wwwgomes
 - [Adjust repository documentation](https://github.com/wwwgomes/icosocial-api/commit/907fe62672c8f5f3de3e2fd3e00c45e102319bf3) - @wwwgomes
 - [Adjust dicumentation of the repository](https://github.com/wwwgomes/icosocial-api/commit/9e597acf3a6666f2bfd1582c30bba6e89776bcc5) - @wwwgomes
+
+---
+
+## v1.2.12 (18/04/2020)
+- [Update version](https://github.com/wwwgomes/icosocial-api/commit/5c6b0c4c24a9399c20eae72cb609e639c24c0724) - @wwwgomes
+- [Adjust in env.example](https://github.com/wwwgomes/icosocial-api/commit/8f81375fcccdae1fce267fc74abbdfaa006d0b05) - @wwwgomes
+- [Adjust in env.example](https://github.com/wwwgomes/icosocial-api/commit/82526e574bcf8e773ef8a55da32eee3d2b6815d5) - @wwwgomes
+- [Manangement Donor](https://github.com/wwwgomes/icosocial-api/commit/8106e209821d261488a3e59f80acec27797c7794) - @wwwgomes
+- [Management Donor](https://github.com/wwwgomes/icosocial-api/commit/3a443fde089e233f3f9e05d1a0b580eb2f46551a) - @wwwgomes
+- [Adjust version](https://github.com/wwwgomes/icosocial-api/commit/3ea1afcf3333bcaa00f834d21d710a01e56183e8) - @wwwgomes
+- [Adjust](https://github.com/wwwgomes/icosocial-api/commit/e5fd4c33e2d1dd6aca7284b0690ad2a0af41e64b) - @wwwgomes
+- [Adjust scripts for production](https://github.com/wwwgomes/icosocial-api/commit/2c41b44471ac5ba5b50d89afb198cb54dd55fe23) - @wwwgomes
+- [Update package.json](https://github.com/wwwgomes/icosocial-api/commit/dd929d4643cf941e28dc00add209d42cdf483245) - @wwwgomes
+- [Release/v1.1.10 (#6) (#7)](https://github.com/wwwgomes/icosocial-api/commit/45a430b04ed3e441762fdcccb6e6b4ea1648514a) - @wwwgomes
+- [Release/v1.1.10 (#6)](https://github.com/wwwgomes/icosocial-api/commit/69971f928c491a7e008d9aaf7ac2abb98466bcaa) - @wwwgomes
 
 ---
 
@@ -46,18 +68,3 @@
 - [Upadate README.md](https://github.com/wwwgomes/icosocial-api/commit/425000a1af6fe85c926912c43eab056472ea8bd1) - @wwwgomes
 - [Update](https://github.com/wwwgomes/icosocial-api/commit/46264958835722db63eade0f8ac8c28e77a3c52f) - @wwwgomes
 - [Create starter](https://github.com/wwwgomes/icosocial-api/commit/b5e09ff50cd40bf6d58bfdfb98baaf62c7b67ead) - @wwwgomes
-
----
-
-## v1.2.12 (18/04/2020)
-- [Update version](https://github.com/wwwgomes/icosocial-api/commit/5c6b0c4c24a9399c20eae72cb609e639c24c0724) - @wwwgomes
-- [Adjust in env.example](https://github.com/wwwgomes/icosocial-api/commit/8f81375fcccdae1fce267fc74abbdfaa006d0b05) - @wwwgomes
-- [Adjust in env.example](https://github.com/wwwgomes/icosocial-api/commit/82526e574bcf8e773ef8a55da32eee3d2b6815d5) - @wwwgomes
-- [Manangement Donor](https://github.com/wwwgomes/icosocial-api/commit/8106e209821d261488a3e59f80acec27797c7794) - @wwwgomes
-- [Management Donor](https://github.com/wwwgomes/icosocial-api/commit/3a443fde089e233f3f9e05d1a0b580eb2f46551a) - @wwwgomes
-- [Adjust version](https://github.com/wwwgomes/icosocial-api/commit/3ea1afcf3333bcaa00f834d21d710a01e56183e8) - @wwwgomes
-- [Adjust](https://github.com/wwwgomes/icosocial-api/commit/e5fd4c33e2d1dd6aca7284b0690ad2a0af41e64b) - @wwwgomes
-- [Adjust scripts for production](https://github.com/wwwgomes/icosocial-api/commit/2c41b44471ac5ba5b50d89afb198cb54dd55fe23) - @wwwgomes
-- [Update package.json](https://github.com/wwwgomes/icosocial-api/commit/dd929d4643cf941e28dc00add209d42cdf483245) - @wwwgomes
-- [Release/v1.1.10 (#6) (#7)](https://github.com/wwwgomes/icosocial-api/commit/45a430b04ed3e441762fdcccb6e6b4ea1648514a) - @wwwgomes
-- [Release/v1.1.10 (#6)](https://github.com/wwwgomes/icosocial-api/commit/69971f928c491a7e008d9aaf7ac2abb98466bcaa) - @wwwgomes
