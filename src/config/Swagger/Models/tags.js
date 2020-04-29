@@ -12,6 +12,9 @@ export default [
     name: 'donors',
   },
   {
+    name: 'donations',
+  },
+  {
     name: 'accounts',
   },
   {
