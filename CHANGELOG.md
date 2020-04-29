@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.4.2 (29/04/2020)
+- [Update readme](https://github.com/wwwgomes/icosocial-api/commit/444e01b9f1e6ad2c75a998a87a82f34079a8045a) - @wwwgomes
+- [Adjust return http method from Donors POST](https://github.com/wwwgomes/icosocial-api/commit/93944b0622fd2ea1e6cdf9f4ea2a1f74a98cdd4d) - @wwwgomes
+- [Router separation ✔️](https://github.com/wwwgomes/icosocial-api/commit/7aaab9b4f5019c3213b82467ba6c04b994567580) - @wwwgomes
+- [Update Changelog](https://github.com/wwwgomes/icosocial-api/commit/aa8feaa317aa9c949156762a9d724d0371b191cf) - @wwwgomes
+
+---
+
 ## v1.4.0 (29/04/2020)
 - [Donation route 👌](https://github.com/wwwgomes/icosocial-api/commit/eae61e544954f159a6862cdeeeb0816a5f1796d2) - @wwwgomes
 - [Add donation](https://github.com/wwwgomes/icosocial-api/commit/d112c5a11b4e7308d9bc4d1876a0a51dc8a33cd7) - @wwwgomes
