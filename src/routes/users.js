@@ -1,6 +1,7 @@
 import { Router } from 'express';
 
 import UserController from '../app/controllers/UserController';
+import TypeUserController from '../app/controllers/TypeUserController';
 import NewPasswordController from '../app/controllers/NewPasswordController';
 import PasswordForgottenController from '../app/controllers/PasswordForgottenController';
 
@@ -14,8 +15,9 @@ const routes = Router();
 
 routes.post('/', validateUserStore, UserController.store);
 
-routes.put('/passwd/recover', PasswordForgottenController.update);
 routes.put('/', authMiddleware, validateUserUpdater, UserController.update);
+routes.put('/type', authMiddleware, TypeUserController.update);
+routes.put('/passwd/recover', PasswordForgottenController.update);
 routes.put(
   '/passwd/update',
   authMiddleware,

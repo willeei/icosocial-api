@@ -2,6 +2,8 @@ import bcrypt from 'bcryptjs';
 
 import User from '../models/User';
 
+import NewUserMailService from '../services/NewUserMailService';
+
 class UserController {
   async store(req, res) {
     const userExists = await User.findOne({ login: req.body.login });
@@ -11,6 +13,8 @@ class UserController {
     }
 
     const { _id, name, login, active, type } = await User.create(req.body);
+
+    await NewUserMailService.run({ user_id: _id });
 
     return res.status(201).json({ _id, name, login, active, type });
   }

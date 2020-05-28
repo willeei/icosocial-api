@@ -21,6 +21,11 @@ const UserSchema = new mongoose.Schema(
     active: {
       type: Boolean,
       required: true,
+      default: false,
+    },
+    first_access: {
+      type: Boolean,
+      required: true,
       default: true,
     },
     passwd_recover: {
@@ -30,9 +35,7 @@ const UserSchema = new mongoose.Schema(
     },
     type: {
       type: String,
-      required: true,
       enum: [Types.DONOR, Types.INSTITUTION, Types.VOLUNTARY],
-      default: Types.DONOR,
     },
     avatar: {
       type: mongoose.Schema.Types.ObjectId,
