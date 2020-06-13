@@ -17,7 +17,7 @@ export default async (req, res, next) => {
     return next();
   } catch (err) {
     return res
-      .status(400)
+      .status(200)
       .json({ error: 'Validation fails', messages: err.inner });
   }
 };
