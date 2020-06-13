@@ -11,20 +11,22 @@ class AuthController {
     const user = await User.findOne({ login });
 
     if (!user) {
-      return res.status(401).json({ error: 'User not found' });
+      return res.status(200).json({ error: 'User not found' });
     }
 
     if (!user.active) {
       return res
-        .status(401)
+        .status(200)
         .json({ error: 'This account is disabled, please contact us.' });
     }
 
+    console.log(password);
+
     if (!(await user.comparePassword(password))) {
-      return res.status(401).json({ error: 'Password does not match' });
+      return res.status(200).json({ error: 'Password is invalid' });
     }
 
-    const { _id, name, type, active, avatar } = user;
+    const { _id, name, type, active, avatar, first_access, person } = user;
 
     return res.json({
       user: {
@@ -33,6 +35,8 @@ class AuthController {
         name,
         type,
         active,
+        first_access,
+        person,
         avatar,
       },
       token: jwt.sign(
@@ -40,6 +44,8 @@ class AuthController {
           id: _id,
           name,
           login,
+          first_access,
+          person,
           type,
           active,
         },

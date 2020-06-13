@@ -37,6 +37,9 @@ const UserSchema = new mongoose.Schema(
       type: String,
       enum: [Types.DONOR, Types.INSTITUTION, Types.VOLUNTARY],
     },
+    person: {
+      type: String,
+    },
     avatar: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'File',

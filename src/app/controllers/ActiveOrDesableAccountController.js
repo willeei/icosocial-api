@@ -2,14 +2,14 @@ import User from '../models/User';
 
 class ActiveOrDesableAccountController {
   async update(req, res) {
-    const account = await User.findOne({ login: req.body.login });
+    const account = await User.findOne({ login: req.body.email });
 
     if (!account) {
-      return res.status(404).json({ error: 'This account does not exist' });
+      return res.status(200).json({ error: 'This account does not exist' });
     }
 
     if (account.active) {
-      return res.status(400).json({ error: 'Account is already active' });
+      return res.status(200).json({ error: 'Account is already active' });
     }
 
     await account.updateOne({ active: true });
