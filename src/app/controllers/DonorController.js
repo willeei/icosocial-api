@@ -3,7 +3,7 @@ import Donor from '../models/Donor';
 class DonorController {
   async index(req, res) {
     if (!req.user) {
-      return res.status(400).json({ error: 'No informed users' });
+      return res.status(200).json({ error: 'No informed users' });
     }
 
     const donors = await Donor.find();
@@ -14,6 +14,7 @@ class DonorController {
   async show(req, res) {
     let donor;
 
+    console.log(req.user);
     if (req.user) {
       donor = await Donor.findOne({
         user_id: req.user.id,
@@ -44,7 +45,7 @@ class DonorController {
 
     if (donorExists) {
       return res
-        .status(400)
+        .status(200)
         .json({ error: 'Donor registration already exists' });
     }
 
@@ -52,7 +53,7 @@ class DonorController {
 
     if (mailExists) {
       return res
-        .status(400)
+        .status(200)
         .json({ error: 'There is already a donor with this email' });
     }
 
@@ -76,6 +77,8 @@ class DonorController {
     let userId;
     let donorExists;
 
+    console.log(req.user);
+
     if (req.user) {
       userId = req.user.id;
       donorExists = await Donor.findOne({ user_id: req.user.id });
@@ -85,17 +88,17 @@ class DonorController {
 
     if (!donorExists) {
       return res
-        .status(400)
+        .status(200)
         .json({ error: 'There is no registration for this donor' });
     }
 
-    const mailExists = await Donor.findOne({ email: req.body.email });
+    // const mailExists = await Donor.findOne({ email: req.body.email });
 
-    if (mailExists) {
-      return res
-        .status(400)
-        .json({ error: 'There is already a donor with this email' });
-    }
+    // if (mailExists) {
+    //   return res
+    //     .status(200)
+    //     .json({ error: 'There is already a donor with this email' });
+    // }
 
     const donor = donorExists;
 
@@ -123,7 +126,7 @@ class DonorController {
     } else if (anonymous) {
       await Donor.findOneAndUpdate({ _id: id }, { disabled: true });
     } else {
-      return res.status(400).json({ error: 'Donor is not anonymous' });
+      return res.status(200).json({ error: 'Donor is not anonymous' });
     }
 
     return res.status(204).send();

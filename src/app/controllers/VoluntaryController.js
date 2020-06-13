@@ -10,7 +10,7 @@ import Types from '../utils/constants/Types';
 class VoluntaryController {
   async index(req, res) {
     if (!req.user) {
-      return res.status(400).json({ error: 'No informed users' });
+      return res.status(200).json({ error: 'No informed users' });
     }
 
     const voluntary = await Voluntary.find();
@@ -20,11 +20,11 @@ class VoluntaryController {
 
   async show(req, res) {
     if (!req.user) {
-      return res.status(400).json({ error: 'No informed users' });
+      return res.status(200).json({ error: 'No informed users' });
     }
 
     if (req.user.type !== Types.VOLUNTARY) {
-      return res.status(400).json({ error: 'User is not a voluntary' });
+      return res.status(200).json({ error: 'User is not a voluntary' });
     }
 
     const voluntary = await Voluntary.findOne({
@@ -61,12 +61,12 @@ class VoluntaryController {
     const voluntaryExists = await Voluntary.findOne({ cpf: req.body.cpf });
 
     if (userExists) {
-      return res.status(400).json({ error: 'User already exists' });
+      return res.status(200).json({ error: 'User already exists' });
     }
 
     if (voluntaryExists) {
       return res
-        .status(400)
+        .status(200)
         .json({ error: 'Voluntary registration already exists' });
     }
 
@@ -74,7 +74,7 @@ class VoluntaryController {
 
     if (mailExists) {
       return res
-        .status(400)
+        .status(200)
         .json({ error: 'There is already a voluntary with this email' });
     }
 
@@ -85,7 +85,7 @@ class VoluntaryController {
 
     if (donor) {
       return res
-        .status(400)
+        .status(200)
         .json({ error: 'There is already a donor registration with this CPF' });
     }
 
@@ -114,7 +114,7 @@ class VoluntaryController {
 
   async update(req, res) {
     if (!req.user) {
-      return res.status(400).json({ error: 'No informed users' });
+      return res.status(200).json({ error: 'No informed users' });
     }
 
     const voluntary = await Voluntary.findOne({ user_id: req.user.id });
@@ -123,7 +123,7 @@ class VoluntaryController {
 
     if (mailExists) {
       return res
-        .status(400)
+        .status(200)
         .json({ error: 'There is already a voluntary with this email' });
     }
 
@@ -144,7 +144,7 @@ class VoluntaryController {
 
   async delete(req, res) {
     if (!req.user) {
-      return res.status(400).json({ error: 'No informed users' });
+      return res.status(200).json({ error: 'No informed users' });
     }
 
     const voluntary = await Voluntary.findOne({
